@@ -4,6 +4,9 @@ import { Fragment } from 'react';
 
 const isAdminView = false;
 const isAuthUser = false;
+const user = {
+  role: 'admin'
+}
 
 export default function Navbar() {
   return (
@@ -16,10 +19,14 @@ export default function Navbar() {
             </span>
           </div>
           <div className="flex md:order-2 gap-2">
-            <Fragment>
-              <button>Account</button>
-              <button>Cart</button>
-            </Fragment>
+            {!isAdminView && isAuthUser ? (
+              <Fragment>
+                <button>Account</button>
+                <button>Cart</button>
+              </Fragment>
+            ) : null}
+
+            {user?.role === 'admin' ? : null}
           </div>
         </div>
       </nav>
