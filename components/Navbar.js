@@ -1,5 +1,10 @@
 'use client';
 
+import { Fragment } from 'react';
+
+const isAdminView = false;
+const isAuthUser = false;
+
 export default function Navbar() {
   return (
     <>
@@ -9,6 +14,12 @@ export default function Navbar() {
             <span className="self-center text-2xl font-semibold whitespace-nowrap">
               Ecommercery
             </span>
+          </div>
+          <div className="flex md:order-2 gap-2">
+            <Fragment>
+              <button>Account</button>
+              <button>Cart</button>
+            </Fragment>
           </div>
         </div>
       </nav>
