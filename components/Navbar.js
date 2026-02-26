@@ -29,6 +29,9 @@ export default function Navbar() {
             {user?.role === 'admin' ?
               isAdminView ? <button>Client view</button> : <button>Admin view</button>
               : null}
+              {
+                isAuthUser ? <button>Logout</button> : <button>Login</button>
+              }
           </div>
         </div>
       </nav>
