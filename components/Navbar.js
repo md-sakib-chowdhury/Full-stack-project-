@@ -3,7 +3,7 @@
 import { Fragment } from 'react';
 
 const isAdminView = false;
-const isAuthUser = false;
+const isAuthUser = true;
 const user = {
   role: 'admin'
 }
@@ -26,7 +26,9 @@ export default function Navbar() {
               </Fragment>
             ) : null}
 
-            {user?.role === 'admin' ? : null}
+            {user?.role === 'admin' ?
+              isAdminView ? <button>Client view</button> : <button>Admin view</button>
+              : null}
           </div>
         </div>
       </nav>
