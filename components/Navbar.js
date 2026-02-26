@@ -7,6 +7,20 @@ const isAuthUser = true;
 const user = {
   role: 'admin'
 }
+function NavItems() {
+  return (
+    <div
+      className="items-center justify-between w-full md:flex md:w-auto"
+      id="nav-items"
+    >
+      <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 bg-white">
+        {
+          
+        }
+      </ul>
+    </div>
+  );
+}
 
 export default function Navbar() {
   return (
@@ -29,9 +43,9 @@ export default function Navbar() {
             {user?.role === 'admin' ?
               isAdminView ? <button>Client view</button> : <button>Admin view</button>
               : null}
-              {
-                isAuthUser ? <button>Logout</button> : <button>Login</button>
-              }
+            {
+              isAuthUser ? <button>Logout</button> : <button>Login</button>
+            }
           </div>
         </div>
       </nav>
